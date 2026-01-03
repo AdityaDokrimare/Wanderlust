@@ -1,0 +1,255 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* .container {
+    
+} */
+
+.navbar {
+    height: 5rem;
+    background-color: white;
+}
+
+.fa-compass {
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: #222222 !important;
+}
+
+/* Footer */
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+    display: inline-block;
+    margin: 0 0.25rem;
+}
+
+.f-info-links {
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+/* Hover Effect */
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+.f-info-socials {
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.f-info {
+    display: flex;
+    height: 8rem;
+    background-color: #ebebeb;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.title-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Cards */
+
+.listing-card {
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+.card-text p {
+    font-weight: 400 !important;
+}
+
+.listing-link {
+    text-decoration: none;
+}
+
+/* Card Effect */
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+}
+
+
+/* Create new listing page */
+.add-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/* Edit Page */
+.edit-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/* Show Page */
+.show-img {
+    height: 30vh;
+}
+
+.showListing-btns {
+    display: flex;
+}
+
+.show-card {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Smaller error/alert styling used by views/Error.ejs */
+.alert.custom-alert {
+    max-width: 520px;
+    padding: 0.6rem 0.9rem;
+    border-radius: 8px;
+}
+.alert.custom-alert .bi {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+}
+.alert.custom-alert .alert-heading {
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.1;
+}
+
+/* Map */
+#map {
+    height: 400px;
+    width: 90vh;
+    border-radius: 20px;
+}
+
+.filters-div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-left: 1rem !important;
+}
+
+.filters {
+    margin-top: 1.25rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    margin-right: 2rem;
+    opacity: 0.7;
+}
+
+.filters:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.tax-info {
+    display: none;
+}
+
+.tax-toggle { 
+    border: 1px solid grey;
+    height: 3.25rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-left: 3.83rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Move tax toggle to the right of the filters row and lift it upward */
+.filters-div .tax-toggle{
+    /* margin-left: 0.1rem; */
+    margin-top: 0.85rem;
+}
+
+/* Ensure columns in the cards view have no extra horizontal padding */
+.cards-view > .col {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Small inner gap between cards so images don't touch exactly the viewport edges */
+.cards-view .listing-card {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+/* Search Button */
+.search-btn {
+    background-color: #fe424d !important;
+    color: #fff !important;
+    border-radius: 25px !important;
+    padding: 0 1rem 0 1rem !important;
+    /* border: 1px solid black !important; */
+}
+
+.search-btn:hover {
+    background-color: #fe424d !important;
+    color: #fff !important;
+}
+
+.search-btn i {
+    display: inline !important;
+    margin-right: 0.5rem !important;
+}
+
+.search-input {
+    border-radius: 25px !important;
+    padding: 0.5rem 3rem 0.5rem 3rem !important;
+    font-size: 1rem !important;
+}
+
+
+/* Override Bootstrap switch color for checked state */
+.form-check-input:checked {
+    background-color: #fe424d !important;
+    border-color: #fe424d !important;
+}
+.form-check-input:checked:focus {
+    box-shadow: 0 0 0 0.25rem rgba(254,66,77,0.25) !important;
+}
+.form-switch .form-check-input:checked {
+    background-color: #fe424d !important;
+    border-color: #fe424d !important;
+}
+
+/* Ensure footer stays at bottom when page content is short */
+footer {
+    margin-top: auto;
+}
+
+/* Make main container grow to fill available vertical space */
+.container-fluid {
+    flex: 1 0 auto;
+}
