@@ -27,7 +27,8 @@ const listingRouter = require("./routes/listing.js");
 const reviewRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
 
-const dbUrl = process.env.ATLASDB_URL
+// const dbUrl = process.env.ATLASDB_URL
+const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
 
 main()
     .then(() => {
@@ -38,7 +39,8 @@ main()
     });
 
 async function main() {
-    await mongoose.connect(dbUrl);
+    // await mongoose.connect(dbUrl);
+    await mongoose.connect(MONGO_URL);
 }
 
 
@@ -109,6 +111,11 @@ passport.deserializeUser(User.deserializeUser());
     app.use("/listings/:id/reviews", reviewRouter);
     // Router object for user signup
     app.use("/", userRouter);
+
+    app.get("/", (req, res) => {
+        res.redirect("/listings"); 
+    });
+
 
 
 // For all other wrong route which are not defined
